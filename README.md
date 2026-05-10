@@ -1,1 +1,28 @@
-Hapishane Takip Sistemi (HMTS)Hapishane Takip Sistemi (HMTS), ceza infaz kurumlarındaki operasyonel süreçleri dijitalleştirerek verimliliği artırmak, veri güvenliğini sağlamak ve manuel hataları minimize etmek amacıyla geliştirilmiş merkezi bir yönetim platformudur.🚀 Proje HakkındaHMTS; mahkum yönetiminden personel takibine, sağlık kayıtlarından ziyaretçi organizasyonuna kadar geniş bir yelpazeyi kapsayan entegre bir mimariye sahiptir. Sistem, Rol Tabanlı Erişim Kontrolü (RBAC) ile yetkilendirme süreçlerini yönetirken, modern arayüzü sayesinde kullanıcı dostu ve ölçeklenebilir bir altyapı sunar.🏗️ Sistem Mimarisi ve Veri YapısıSistem, veri bütünlüğünü korumak adına ilişkisel bir veritabanı modeli üzerine inşa edilmiştir. Mahkumlar tablosu sistemin merkezinde yer almaktadır.Temel Tablolar ve İlişkilerTablo AdıAçıklamaİlişki / BağlantıMahkumlarSistemin ana veri kümesi.kogus_id üzerinden Koğuşlar tablosuna bağlıdır.KoguslarKoğuş kapasite ve lokasyon bilgileri.Mahkumlar ile bire-çok ilişki içindedir.PersonelKurum çalışanlarının görev ve kimlik bilgileri.İdari süreçlerin yönetimini sağlar.Saglik_KayitlariMahkumların tıbbi geçmişi ve muayene verileri.mahkum_id ile doğrudan erişim sağlar.ZiyaretcilerKuruma gelen sivil ziyaretçi verileri.ziyaret_kayitlari ara tablosu ile ilişkilidir.Ziyaret_KayitlariZiyaretçi-Mahkum eşleşmesi ve zaman kaydı.Referans bütünlüğünü sağlayan ara tablodur.Disiplin_ArsiviMahkumların ceza ve ödül kayıtları.mahkum_id anahtarı ile bağlıdır.Mahkum_Gorevleriİş yönetimi ve mahkum iş kolları takibi.is_turleri tablosu ile entegre çalışır.✨ Temel ÖzelliklerMerkezi Entegrasyon: Tüm modüller birbirine yabancı anahtarlar (Foreign Keys) ile bağlıdır, bu sayede veri tutarlılığı korunur.Dijital Sağlık Takibi: Mahkumların sağlık süreçleri kağıt formlardan kurtarılarak dijital ortama aktarılmıştır.Güvenli Ziyaretçi Yönetimi: Ziyaretçi ve mahkum arasındaki ilişkiler detaylı bir şekilde raporlanabilir ve izlenebilir.Görev ve İş Yönetimi: Kurum içindeki iş gücü planlaması is_turleri ve mahkum_gorevleri üzerinden takip edilir.Disiplin Arşivi: Şeffaf bir yönetim anlayışı için tüm disiplin süreçleri tarihçeli olarak saklanır.🛠️ Teknik StandartlarVeri Bütünlüğü: Referans bütünlüğü kuralları ile hatalı veri girişinin önüne geçilir.Güvenlik: Rol Tabanlı Erişim Kontrolü (RBAC) ile personelin sadece yetkisi dahilindeki verilere erişimi sağlanır.Ölçeklenebilirlik: Modern mimarisi sayesinde gelecekteki modül eklemelerine ve yüksek veri trafiğine uygundur.📊 İş AkışıKayıt: Mahkum kuruma girdiğinde kişisel bilgileri ve koğuş ataması yapılır.Operasyon: Günlük sağlık kontrolleri, iş görevlendirmeleri ve disiplin kayıtları sistem üzerinden işlenir.Ziyaret: Ziyaretçi kabulünde, mahkum ile olan ilişki ara tablo üzerinden kontrol edilerek kayıt altına alınır.Denetim: Tüm bu süreçler yetkili personel tarafından dashboardlar üzerinden izlenebilir.
+🏢 Hapishane Takip Sistemi (HMTS)HMTS, ceza infaz kurumlarındaki karmaşık operasyonel süreçleri dijitalleştirerek verimliliği artırmak ve veri güvenliğini en üst düzeye çıkarmak amacıyla geliştirilmiş merkezi bir yönetim platformudur.
+
+
+🚀 Proje HakkındaSistem; mahkum yönetiminden personel takibine, sağlık kayıtlarından ziyaretçi organizasyonuna kadar geniş bir yelpazeyi kapsayan entegre bir mimariye sahiptir. Rol Tabanlı Erişim Kontrolü (RBAC) ile yetkilendirme süreçlerini yönetirken, modern arayüzü sayesinde kullanıcı dostu bir deneyim sunar.
+
+
+
+🏗️ Sistem Mimarisi ve Veri YapısıVeritabanı tasarımı, veri bütünlüğünü korumak adına ilişkisel model üzerine inşa edilmiştir. Tüm sistemin merkezinde Mahkumlar tablosu yer alır.
+
+
+📊 Temel Tablolar ve İlişkilerTablo AdıAçıklamaİlişki / BağlantıMahkumlarSistemin ana veri kümesi.kogus_id ile Koğuşlar tablosuna bağlıdır.KoguslarKapasite ve lokasyon bilgileri.Mahkumlar ile bire-çok ilişki kurar.PersonelÇalışan görev ve kimlik bilgileri.İdari süreç yönetimini sağlar.Saglik_KayitlariTıbbi geçmiş ve muayene verileri.mahkum_id ile mahkuma bağlıdır.Ziyaret_KayitlariZiyaretçi-Mahkum eşleşmeleri.Referans bütünlüğünü sağlayan ara tablodur.Disiplin_ArsiviCeza ve ödül geçmişi.mahkum_id anahtarı ile izlenir.Mahkum_Gorevleriİş yönetimi ve görev takibi.is_turleri tablosu ile entegre çalışır.
+
+✨ Temel Özellikler🔗 Merkezi Entegrasyon: Tüm modüller yabancı anahtarlar (FK) ile birbirine bağlıdır.
+
+
+🩺 Dijital Sağlık Takibi: Kağıt formlar yerine tamamen dijital tıbbi arşivleme.
+
+👥 Güvenli Ziyaret Yönetimi: Ziyaretçi ve mahkum ilişkileri detaylı raporlanabilir.
+
+🛠️ Görev Yönetimi: Kurum içi iş gücü planlaması ve iş kolları takibi.
+
+📜 Şeffaf Disiplin Arşivi: Tüm disiplin süreçleri tarihçeli olarak saklanır.
+
+
+⚙️ Teknik StandartlarVeri Bütünlüğü: SQL kısıtlamaları (constraints) ile hatalı girişler engellenir.Güvenlik: RBAC mimarisi ile sadece yetkili personelin veri görmesi sağlanır.Ölçeklenebilirlik: Gelecekteki modül eklemelerine uygun, modüler altyapı.
+
+
+🔄 İş AkışıKayıt: Mahkum girişi ve koğuş ataması yapılır.Operasyon: Günlük sağlık, iş ve disiplin kayıtları sisteme işlenir.Ziyaret: Randevu ve ziyaretçi kayıtları mahkumla eşleştirilerek tutulur.Denetim: Tüm veriler dashboardlar üzerinden yetkili personelce izlenir.
